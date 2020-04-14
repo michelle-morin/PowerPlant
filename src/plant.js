@@ -18,3 +18,10 @@ export const changePlantState = (plant, property) => {
     [property]: (plant[property] || 0) + 1
   }
 };
+
+export const changeState = (state, prop) => {
+  // return {
+  //   ...state,
+  //   [prop]: (state[prop] || 0) +1
+  // }
+};

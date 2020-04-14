@@ -1,4 +1,4 @@
-import { hydrate, feed, changePlantState } from './../src/plant.js';
+import { hydrate, feed, changePlantState, changeState } from './../src/plant.js';
 
 describe('hydrate', () => {
 
@@ -24,5 +24,14 @@ describe('changePlantState', () => {
     const plant = {};
     const newPlant = changePlantState(plant, "soil");
     expect(newPlant.soil).toEqual(1);
+  });
+});
+
+describe('changeState', () => {
+
+  test('should increment an object light level by 1', () => {
+    const state = {};
+    const newState = changeState(state, "light");
+    expect(newState.light).toEqual(1);
   });
 });
