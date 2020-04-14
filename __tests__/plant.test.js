@@ -4,7 +4,7 @@ describe('hydrate', () => {
 
   test('should increment a plant water level by 1', () => {
     const plant = {};
-    const newPlant = hydrate(plant);
+    const newPlant = hydrate(1)(plant);
     expect(newPlant.water).toEqual(1);
   });
 });
@@ -13,7 +13,7 @@ describe('feed', () => {
 
   test('should increment a plant soil level by 1', () => {
     const plant = {};
-    const newPlant = feed(plant);
+    const newPlant = feed(1)(plant);
     expect(newPlant.soil).toEqual(1);
   });
 });
@@ -27,11 +27,11 @@ describe('changePlantState', () => {
   });
 });
 
-describe('changeState', () => {
+// describe('changeState', () => {
 
-  test('should increment an object light level by 1', () => {
-    const state = {};
-    const newState = changeState(state, "light", 3);
-    expect(newState.light).toEqual(3);
-  });
-});
+//   test('should increment an object light level by 1', () => {
+//     const state = {};
+//     const newState = changeState(state, "light", 3);
+//     expect(newState.light).toEqual(3);
+//   });
+// });
