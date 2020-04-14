@@ -21,9 +21,11 @@ export const spritzOfWater = hydrate(2);
 export const lowLight = giveLight(1);
 export const highLight = giveLight(5);
 
-export const storeState = () => {
-  // let currentState = initialState;
-  let currentState = {};
+const initialValues = {soil: 0, water: 0, light: 0};
+
+export const storeState = (initialState) => {
+  let currentState = initialState;
+  // let currentState = {};
   return (stateChangeFunction) => {
     const newState = stateChangeFunction(currentState);
     currentState = {...newState};
@@ -31,5 +33,5 @@ export const storeState = () => {
   };
 };
 
-export const stateChanger = storeState();
-export const stateChanger2 = storeState();
+export const cactus = storeState(initialValues);
+export const deskPlant = storeState(initialValues);
