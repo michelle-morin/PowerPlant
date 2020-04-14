@@ -1,4 +1,4 @@
-import { hydrate, feed, yuckyFood} from './../src/plant.js';
+import { hydrate, feed, yuckyFood, storeState, stateChanger, blueFood } from './../src/plant.js';
 
 describe('hydrate', () => {
 
@@ -24,5 +24,13 @@ describe('yuckyFood', () => {
     const plant = {};
     const newPlant = yuckyFood(plant);
     expect(newPlant.soil).toEqual(-5);
+  });
+});
+
+describe('stateChanger', () => {
+
+  test('should change state by a specified function', () => {
+    const fedPlant = stateChanger(blueFood);
+    expect(fedPlant.soil).toBe(5);
   });
 });
