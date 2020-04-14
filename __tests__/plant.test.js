@@ -1,4 +1,4 @@
-import { hydrate, feed, changePlantState, changeState } from './../src/plant.js';
+import { hydrate, feed, yuckyFood} from './../src/plant.js';
 
 describe('hydrate', () => {
 
@@ -18,20 +18,11 @@ describe('feed', () => {
   });
 });
 
-describe('changePlantState', () => {
+describe('yuckyFood', () => {
 
-  test('should increment a plant soil level by 1', () => {
+  test('should decrement a plant soil level by 5', () => {
     const plant = {};
-    const newPlant = changePlantState(plant, "soil");
-    expect(newPlant.soil).toEqual(1);
+    const newPlant = yuckyFood(plant);
+    expect(newPlant.soil).toEqual(-5);
   });
 });
-
-// describe('changeState', () => {
-
-//   test('should increment an object light level by 1', () => {
-//     const state = {};
-//     const newState = changeState(state, "light", 3);
-//     expect(newState.light).toEqual(3);
-//   });
-// });
