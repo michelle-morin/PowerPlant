@@ -12,11 +12,9 @@ _This application allows users to grow plants._
 
 | Specification | Example Input | Example Output |
 | ------------- |:-------------:| -------------------:|
-| Application allows a user to give a plant light | giveLight() | plant's light level increments |
-| Application allows a user to feed a plant fertilizer | feed() | plant's soil level increments |
-| Application allows a user to water a plant | hydrate() | plant's water level increments |
-| Application allows a user to make multiple plants | | creates new plant object |
-| Application allows a user to add different abilities to different plants | | |
+| Application allows a user to give a plant light | user clicks button to give light | plant's light level increments |
+| Application allows a user to feed a plant fertilizer | user clicks button to give food | plant's soil level increments |
+| Application allows a user to water a plant | user click button to water plant | plant's water level increments |
 
 ## Setup/Installation Requirements
 
