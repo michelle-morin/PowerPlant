@@ -31,7 +31,7 @@ describe('changeState', () => {
 
   test('should increment an object light level by 1', () => {
     const state = {};
-    const newState = changeState(state, "light");
-    expect(newState.light).toEqual(1);
+    const newState = changeState(state, "light", 3);
+    expect(newState.light).toEqual(3);
   });
 });
