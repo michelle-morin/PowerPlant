@@ -32,3 +32,4 @@ export const storeState = () => {
 }
 
 export const stateChanger = storeState();
+export const stateChanger2 = storeState();
