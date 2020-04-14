@@ -20,8 +20,8 @@ export const changePlantState = (plant, property) => {
 };
 
 export const changeState = (state, prop) => {
-  // return {
-  //   ...state,
-  //   [prop]: (state[prop] || 0) +1
-  // }
+  return {
+    ...state,
+    [prop]: (state[prop] || 0) +1
+  }
 };
