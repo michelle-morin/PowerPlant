@@ -15,7 +15,14 @@ export const blueFood = feed(5);
 export const greenFood = changeState("soil")(10);
 export const yuckyFood = feed(-5);
 
+export const lotsOfWater = hydrate(10);
+export const spritzOfWater = hydrate(2);
+
+export const lowLight = giveLight(1);
+export const highLight = giveLight(5);
+
 export const storeState = () => {
+  // let currentState = initialState;
   let currentState = {};
   return (stateChangeFunction) => {
     const newState = stateChangeFunction(currentState);
