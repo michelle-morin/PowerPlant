@@ -1,36 +1,54 @@
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css';
 import { yuckyFood, stateChanger, stateChanger2, blueFood, greenFood, lowLight, highLight, lotsOfWater, spritzOfWater } from './../src/plant.js';
 
 $(document).ready(function () {
-  $('#blueFood').click(function() {
+  // const counterFunction = () => {
+  //   let counter = 2;
+  //   return () => {
+  //     counter ++;
+  //     return counter;
+  //   };
+  // };
+  // const incrementer = counterFunction();
+
+  // for (i = 1; i<=counter; i++) {
+  //   $(`#blueFood${i}`).click(function() {
+  //   const functionToRun = "stateChanger" + i;
+  //   const newState = functionToRun(blueFood);
+  //   $(`#soil-value${i}`).text(newState.soil);
+  //   });
+  // }
+
+  $('#blueFood1').click(function() {
     const newState = stateChanger(blueFood);
-    $('#soil-value').text(newState.soil);
+    $('#soil-value1').text(newState.soil);
   });
-  $('#yuckyFood').click(function() {
+  $('#yuckyFood1').click(function() {
     const newState = stateChanger(yuckyFood);
-    $('#soil-value').text(newState.soil);
+    $('#soil-value1').text(newState.soil);
   });
-  $('#greenFood').click(function() {
+  $('#greenFood1').click(function() {
     const newState = stateChanger(greenFood);
-    $('#soil-value').text(newState.soil);
+    $('#soil-value1').text(newState.soil);
   });
-  $('#highLight').click(function() {
+  $('#highLight1').click(function() {
     const newState = stateChanger(highLight);
-    $('#light-value').text(newState.light);
+    $('#light-value1').text(newState.light);
   });
-  $('#lowLight').click(function() {
+  $('#lowLight1').click(function() {
     const newState = stateChanger(lowLight);
-    $('#light-value').text(newState.light);
+    $('#light-value1').text(newState.light);
   });
-  $('#lotsOfWater').click(function() {
+  $('#lotsOfWater1').click(function() {
     const newState = stateChanger(lotsOfWater);
-    $('#water-value').text(newState.water);
+    $('#water-value1').text(newState.water);
   });
-  $('#spritzOfWater').click(function() {
+  $('#spritzOfWater1').click(function() {
     const newState = stateChanger(spritzOfWater);
-    $('#water-value').text(newState.water);
+    $('#water-value1').text(newState.water);
   });
 
   $('#blueFood2').click(function() {

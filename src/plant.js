@@ -3,8 +3,8 @@ export const changeState = (prop) => {
     return (state) => ({
       ...state,
       [prop] : (state[prop] || 0) + value
-    })
-  }
+    });
+  };
 };
 
 export const feed = changeState("soil");
@@ -28,8 +28,8 @@ export const storeState = () => {
     const newState = stateChangeFunction(currentState);
     currentState = {...newState};
     return newState;
-  }
-}
+  };
+};
 
 export const stateChanger = storeState();
 export const stateChanger2 = storeState();
